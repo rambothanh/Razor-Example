@@ -1,0 +1,9 @@
+﻿@model Razor.Models.Product
+@{
+    ViewBag.Title = "Name And Price";
+    Layout = "~/Views/_BasicLayout.cshtml";
+}
+
+<h2>Tên và giá</h2>
+Tên sản phẩm là @Model.Name có giá là: $@Model.Price
+

@@ -1,0 +1,31 @@
+﻿@using Razor.Models
+@model Product[]
+
+@{
+    ViewBag.Title = "DemoArray";
+    Layout = "~/Views/_BasicLayout.cshtml";
+}
+
+@if (Model.Length > 0)
+{
+    <table>
+        <thead>
+            <tr><td>Product</td><th>Price</th></tr>
+        </thead>
+        <tbody>
+            @*@for (int i = 0; i < Model.Length; i++)
+                {
+                    <tr><td>@Model[i].Name</td><td>$@Model[i].Price</td></tr>
+                }*@
+            @foreach (Product p in Model)
+            {
+                <tr>
+                    <td>@p.Name</td>
+                    <td>$@p.Price</td>
+                </tr>
+            }
+
+
+        </tbody>
+    </table>
+}
